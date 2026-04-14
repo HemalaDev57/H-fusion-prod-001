@@ -88,7 +88,7 @@ pipeline {
                 echo "Artifact ID : ${env.ARTIFACT_ID}"
                 registerDeployedArtifactMetadata(
                     artifactId: "${env.ARTIFACT_ID}",
-                    targetEnvironment: "production-invalid",
+                    targetEnvironment: "production",
                     labels: "prod"
                 )    
                 echo 'Deploying...'
