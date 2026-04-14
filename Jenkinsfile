@@ -49,8 +49,7 @@ pipeline {
             steps {
                 echo "Artifact ID : ${env.ARTIFACT_ID}"
                 registerDeployedArtifactMetadata(
-                    id: "${env.ARTIFACT_ID}",
-                    url: "docker.io/hemaladev57/h-e2e-prod-v5:1.0.1",
+                    artifactId: "${env.ARTIFACT_ID}",
                     targetEnvironment: "preprod",
                     labels: "prod"
                 )    
@@ -88,8 +87,7 @@ pipeline {
             steps {
                 echo "Artifact ID : ${env.ARTIFACT_ID}"
                 registerDeployedArtifactMetadata(
-                    id: "${env.ARTIFACT_ID}",
-                    url: "docker.io/hemaladev57/h-e2e-prod-v5-1:1.0.1",
+                    artifactId: "${env.ARTIFACT_ID}",
                     targetEnvironment: "production-invalid",
                     labels: "prod"
                 )    
